@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mini Attendance App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Attendance, Bestie</h1>
+    <p class="sub">Who showed up? Who’s ghosting? We’re about to find out.</p>
+    <span class="date" id="date"></span>
+  </header>
+
+  <section class="sticker" aria-label="Add a student">
+    <form class="add" id="addForm">
+      <input type="text" id="nameInput" placeholder="Add a name, queen…" maxlength="40" autocomplete="off" aria-label="Student name">
+      <button class="btn pink" type="submit">Add her ✨</button>
+    </form>
+    <div class="tools">
+      <button class="btn" id="allHere" type="button">Everyone’s here 💅</button>
+      <button class="btn" id="resetDay" type="button">New day 🔄</button>
+      <button class="btn" id="demo" type="button">Add demo squad 🎀</button>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Today’s numbers" aria-live="polite">
+    <div class="stat s-here"><b id="nHere">0</b><span>Present</span></div>
+    <div class="stat s-late"><b id="nLate">0</b><span>Late</span></div>
+    <div class="stat s-gone"><b id="nGone">0</b><span>Ghosted</span></div>
+    <div class="stat s-all"><b id="nAll">0</b><span>Squad</span></div>
+  </section>
+
+  <section class="sticker" aria-label="Attendance list">
+    <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+    <p class="verdict" id="verdict"></p>
+    <ul id="list"></ul>
+    <p class="toast" id="toast" role="status"></p>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
